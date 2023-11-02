@@ -1,0 +1,3 @@
+USMAN,12345,Admin
+Usman,12345,Customer
+ali,1234,Stock
