@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6238B963-109C-4D43-B57B-89E85711263B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OSSDG</RootNamespace>
+    <AssemblyName>OSSDG</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\CustomerBL.cs" />
+    <Compile Include="BL\StockBL.cs" />
+    <Compile Include="FORMS\STOCK MANAGER\cancelorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\STOCK MANAGER\cancelorder.Designer.cs">
+      <DependentUpon>cancelorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\STOCK MANAGER\deadlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\STOCK MANAGER\deadlock.Designer.cs">
+      <DependentUpon>deadlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\StockDL.cs" />
+    <Compile Include="FORMS\CUSTOMER FORMS\buy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\CUSTOMER FORMS\buy.Designer.cs">
+      <DependentUpon>buy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\CustomerDL.cs" />
+    <Compile Include="FORMS\CUSTOMER FORMS\BuyItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\CUSTOMER FORMS\BuyItem.Designer.cs">
+      <DependentUpon>BuyItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\deleteform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\deleteform.Designer.cs">
+      <DependentUpon>deleteform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\EditItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\EditItem.Designer.cs">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\EditItemgrd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\EditItemgrd.Designer.cs">
+      <DependentUpon>EditItemgrd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\ADD ITEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\ADD ITEM.Designer.cs">
+      <DependentUpon>ADD ITEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BL\ITEMBL.cs" />
+    <Compile Include="DL\ITEMDL.cs" />
+    <Compile Include="FORMS\ADMIN FORMS\ADDUSER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\ADDUSER.Designer.cs">
+      <DependentUpon>ADDUSER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BL\USERBL.cs" />
+    <Compile Include="DL\USERDL.cs" />
+    <Compile Include="FORMS\ADMIN FORMS\ADMIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\ADMIN.Designer.cs">
+      <DependentUpon>ADMIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\CUSTOMER FORMS\CUSTOMER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\CUSTOMER FORMS\CUSTOMER.Designer.cs">
+      <DependentUpon>CUSTOMER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\LOGIN FORM\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\LOGIN FORM\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\START PAGE FORM\startpage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\START PAGE FORM\startpage.Designer.cs">
+      <DependentUpon>startpage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\STOCK MANAGER\order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\STOCK MANAGER\order.Designer.cs">
+      <DependentUpon>order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\STOCK MANAGER\orderform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\STOCK MANAGER\orderform.Designer.cs">
+      <DependentUpon>orderform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\CUSTOMER FORMS\PrintBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\CUSTOMER FORMS\PrintBill.Designer.cs">
+      <DependentUpon>PrintBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FORMS\ADMIN FORMS\VIEWUSER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\VIEWUSER.Designer.cs">
+      <DependentUpon>VIEWUSER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\VIEWITEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\VIEWITEM.Designer.cs">
+      <DependentUpon>VIEWITEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ADMIN FORMS\UpdateForm.Designer.cs">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\CUSTOMER FORMS\viewitemname.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\CUSTOMER FORMS\viewitemname.Designer.cs">
+      <DependentUpon>viewitemname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\CUSTOMER FORMS\viewitemprice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\CUSTOMER FORMS\viewitemprice.Designer.cs">
+      <DependentUpon>viewitemprice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\STOCK MANAGER\StockManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\STOCK MANAGER\StockManager.Designer.cs">
+      <DependentUpon>StockManager.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FORMS\STOCK MANAGER\cancelorder.resx">
+      <DependentUpon>cancelorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\STOCK MANAGER\deadlock.resx">
+      <DependentUpon>deadlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\CUSTOMER FORMS\buy.resx">
+      <DependentUpon>buy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\CUSTOMER FORMS\BuyItem.resx">
+      <DependentUpon>BuyItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ADMIN FORMS\deleteform.resx">
+      <DependentUpon>deleteform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ADMIN FORMS\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ADMIN FORMS\EditItem.resx">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ADMIN FORMS\EditItemgrd.resx">
+      <DependentUpon>EditItemgrd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ADMIN FORMS\ADD ITEM.resx">
+      <DependentUpon>ADD ITEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ADMIN FORMS\ADDUSER.resx">
+      <DependentUpon>ADDUSER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ADMIN FORMS\ADMIN.resx">
+      <DependentUpon>ADMIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\CUSTOMER FORMS\CUSTOMER.resx">
+      <DependentUpon>CUSTOMER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\LOGIN FORM\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\START PAGE FORM\startpage.resx">
+      <DependentUpon>startpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\STOCK MANAGER\order.resx">
+      <DependentUpon>order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\STOCK MANAGER\orderform.resx">
+      <DependentUpon>orderform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\CUSTOMER FORMS\PrintBill.resx">
+      <DependentUpon>PrintBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FORMS\ADMIN FORMS\VIEWUSER.resx">
+      <DependentUpon>VIEWUSER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ADMIN FORMS\VIEWITEM.resx">
+      <DependentUpon>VIEWITEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ADMIN FORMS\UpdateForm.resx">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\CUSTOMER FORMS\viewitemname.resx">
+      <DependentUpon>viewitemname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\CUSTOMER FORMS\viewitemprice.resx">
+      <DependentUpon>viewitemprice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\STOCK MANAGER\StockManager.resx">
+      <DependentUpon>StockManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-08-06 at 6.40.19 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\U.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-08-09 at 8.18.03 PM %281%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2022-08-09 at 8.18.03 PM %281%291.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qwe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
